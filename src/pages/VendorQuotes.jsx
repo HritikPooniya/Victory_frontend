@@ -63,7 +63,7 @@ const VendorQuotes = () => {
 
     setErrors(newErrors);
 
-    if (Object.keys(newErrors).length === 0) {
+    if (Object.keys(newErrors).length !== 0) {
       const newformData = new FormData();
 
       newformData.append("price", formData.price);
