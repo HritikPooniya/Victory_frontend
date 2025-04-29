@@ -12,7 +12,7 @@ const Header = () => {
       navigate('/')
     }
 
-  },[navigate])
+  },[navigate,role])
   return (
     <header className="topbar">
       <div className="welcome">Welcome Henry</div>
