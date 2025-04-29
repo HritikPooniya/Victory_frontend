@@ -1,0 +1,22 @@
+.topbar {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1001;
+  }
+  
+  .welcome {
+    font-weight: 500;
+  }
+  
+  .logout {
+    text-decoration: none;
+    color: #333;
+  }
+  
