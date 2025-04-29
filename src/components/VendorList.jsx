@@ -5,7 +5,7 @@ const VendorList = () => {
   const [vendors, setVendors] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5003/vendors')
+    axios.get('https://velocity-backend-8kea.onrender.com/vendors')
       .then(res => {
         setVendors(res.data.users);
       })
@@ -52,7 +52,7 @@ const VendorList = () => {
                     onClick={() => {
                       axios
                         .patch(
-                          `http://localhost:5003/updateVendorStatus/${vendor._id}`
+                          `https://velocity-backend-8kea.onrender.com/updateVendorStatus/${vendor._id}`
                         )
                         .then((res) => {
                           setVendors((prevVendor) =>
