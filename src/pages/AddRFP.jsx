@@ -56,7 +56,7 @@ const AddRFP = () => {
     if (Object.keys(errors).length === 0) {
       //   console.log("Submitting form: ", formData);
       axios
-        .post("http://localhost:5003/createRFP", newformData)
+        .post("https://velocity-backend-8kea.onrender.com/createRFP", newformData)
         .then((res) => console.log(res.data), navigate("/rfp"))
         .catch((err) => console.log(err));
     }
@@ -79,7 +79,7 @@ const AddRFP = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5003/getCategories")
+      .get("https://velocity-backend-8kea.onrender.com/getCategories")
       .then((res) => {
         setCategories(res.data);
       })
@@ -90,7 +90,7 @@ const AddRFP = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5003/vendorsByCategory/${selectedCategory}`)
+      .get(`https://velocity-backend-8kea.onrender.com/vendorsByCategory/${selectedCategory}`)
       .then((res) => {
         setVendor(res.data.vendors);
       })

@@ -6,7 +6,7 @@ const Users = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5003/quotations")
+      .get("https://velocity-backend-8kea.onrender.com/quotations")
       .then((res) => setrfps(res.data.quotations))
       .catch((err) => console.log(err));
   }, []);

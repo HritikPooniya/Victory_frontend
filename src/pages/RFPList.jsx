@@ -6,7 +6,7 @@ const RFPList = () => {
 
   const getRfps = () => {
     axios
-      .get("http://localhost:5003/rfps")
+      .get("https://velocity-backend-8kea.onrender.com/rfps")
       .then((res) => setRfps(res.data.rfps))
       .catch((err) => console.log(err));
   };
@@ -104,7 +104,7 @@ const RFPList = () => {
                                 onClick={() => {
                                   axios
                                     .patch(
-                                      `http://localhost:5003/updateRFPStatus/${rfp._id}`
+                                      `https://velocity-backend-8kea.onrender.com/updateRFPStatus/${rfp._id}`
                                     )
                                     .then((res) => {
                                       setRfps((prevRfps) =>

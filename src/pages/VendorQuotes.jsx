@@ -11,7 +11,7 @@ const VendorQuotes = () => {
     const token = localStorage.getItem("token");
 
     axios
-      .get("http://localhost:5003/rfpsForVendor", {
+      .get("https://velocity-backend-8kea.onrender.com/rfpsForVendor", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -75,7 +75,7 @@ const VendorQuotes = () => {
 
       //   console.log("Submitting form: ", formData);
       axios
-        .post("http://localhost:5003/submitQuotation", newformData, {
+        .post("https://velocity-backend-8kea.onrender.com/submitQuotation", newformData, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -83,7 +83,7 @@ const VendorQuotes = () => {
         .then(
           (res) => console.log(res.data),
           axios
-            .patch(`http://localhost:5003/appliedRfp/${id}`)
+            .patch(`https://velocity-backend-8kea.onrender.com/appliedRfp/${id}`)
             .then((res) => console.log("Status Updated"))
             .catch((err) => console.log("Err", err)),
           setShowQuote(true)

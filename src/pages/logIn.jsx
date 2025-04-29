@@ -38,7 +38,7 @@ const LogIn = () => {
     newformData.append("password", password);
 
     await axios
-      .post("http://localhost:5003/login", newformData)
+      .post("https://velocity-backend-8kea.onrender.com/login", newformData)
       .then((response) => {
         console.log("register successful:", response.data);
         localStorage.setItem("token", response?.data.token);

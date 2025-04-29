@@ -104,7 +104,7 @@ const VendorRegister = () => {
   };
   useEffect(() => {
     axios
-      .get("http://localhost:5003/getCategories")
+      .get("https://velocity-backend-8kea.onrender.com/getCategories")
       .then((res) => setCategories(res.data))
       .catch((err) => console.log(err));
   }, []);
@@ -129,7 +129,7 @@ const VendorRegister = () => {
       newformData.append("category", formData.categories);
 
       await axios
-        .post("http://localhost:5003/register", newformData)
+        .post("https://velocity-backend-8kea.onrender.com/register", newformData)
         .then((response) => {
           toast.success("Register Succesfull!");
           navigate("/");
@@ -151,7 +151,7 @@ const VendorRegister = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5003/getCategories")
+      .get("https://velocity-backend-8kea.onrender.com/getCategories")
       .then((res) => {
         setGetCategories(res.data);
       })

@@ -6,7 +6,7 @@ const Categories = () => {
 
   const getData = () => {
     axios
-      .get("http://localhost:5003/getCategories")
+      .get("https://velocity-backend-8kea.onrender.com/getCategories")
       .then((res) => {
         setCategories(res.data);
       })
@@ -100,7 +100,7 @@ const Categories = () => {
                                 onClick={() => {
                                   axios
                                     .patch(
-                                      `http://localhost:5003/categoryStatus/${vendor._id}`
+                                      `https://velocity-backend-8kea.onrender.com/categoryStatus/${vendor._id}`
                                     )
                                     .then(
                                       (res) => console.log("Status Updated")

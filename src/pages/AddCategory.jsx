@@ -26,7 +26,7 @@ const AddCategory = () => {
     newformData.append("name", name);
 
     await axios
-      .post("http://localhost:5003/addCategory", newformData)
+      .post("https://velocity-backend-8kea.onrender.com/addCategory", newformData)
       .then((response) => {
         console.log("register successful:", response.data);
         navigate("/categories");
