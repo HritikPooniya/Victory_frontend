@@ -254,7 +254,7 @@ const AddRFP = () => {
                   onChange={handleVendorChange}
                 >
                   {vendor
-                    ?.filter((val) => val.status === "active")
+                    ?.filter((val) => val.status === "Active")
                     .map((val, index) => (
                       <option className="my-2" key={index} value={val.email}>
                         {val.firstname} {val.lastname}
