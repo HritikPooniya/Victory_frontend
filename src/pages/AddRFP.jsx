@@ -131,9 +131,13 @@ const AddRFP = () => {
             id="category"
             onChange={(e) => setSelectedCategory(e.target.value)}
           >
-            {categories.map((val, index) => (
-              <option value={val.name}>{val.name}</option>
-            ))}
+            {categories.map((val, index) => {
+              return (
+                <option value={val.name} key={index}>
+                  {val.name}
+                </option>
+              );
+            })}
           </select>
         </>
       ) : (
@@ -249,16 +253,13 @@ const AddRFP = () => {
                   value={formData.vendors}
                   onChange={handleVendorChange}
                 >
-                  {vendor?.map((val, index) => {
-                    if (val.status === "Deactive") {
-                      return;
-                    }
-                    return (
+                  {vendor
+                    ?.filter((val) => val.status === "active")
+                    .map((val, index) => (
                       <option className="my-2" key={index} value={val.email}>
                         {val.firstname} {val.lastname}
                       </option>
-                    );
-                  })}
+                    ))}
                 </select>
                 {errors.vendors && (
                   <p className="text-danger">{errors.vendors}</p>

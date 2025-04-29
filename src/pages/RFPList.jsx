@@ -172,27 +172,6 @@ const RFPList = () => {
         </div>
       </div>
 
-      <footer className="footer col-8 mt-5">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col-sm-6">2022 &copy; Copyright.</div>
-            <div className="col-sm-6">
-              <div className="text-sm-right d-none d-sm-block">
-                Support Email:
-                <a
-                  href="#"
-                  className="text-muted"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {" "}
-                  support@velsof.com{" "}
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };

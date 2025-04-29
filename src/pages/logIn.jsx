@@ -17,7 +17,7 @@ const LogIn = () => {
     if (role) {
       navigate("/dashboard");
     }
-  }, []);
+  }, [navigate,role]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
